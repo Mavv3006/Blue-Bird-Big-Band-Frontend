@@ -28,8 +28,6 @@
 <script setup lang="ts">
 const props = defineProps<{ element: Route }>()
 
-console.debug(props.element);
-
 if (props.element.link !== undefined && props.element.submenu !== undefined) {
   throw TypeError('both link and submenu are not supported')
 }
