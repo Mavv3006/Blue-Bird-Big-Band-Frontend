@@ -1,27 +1,26 @@
 <template>
   <div>
     <h1 class="text-center font-bold text-[#3d4449] text-xl md:text-3xl lg:text-4xl xl:text-5xl">
-            Willkommen bei der
-            <br>
-            Blue Bird Big Band
-            <br>
-            der Städtischen Musikschule Speyer
-        </h1>
+      Willkommen bei der
+      <br>
+      Blue Bird Big Band
+      <br>
+      der Städtischen Musikschule Speyer
+    </h1>
 
-        <img
-            alt="Gruppenbild der Blue Bird Big Band"
-            class="w-[80%] block mx-auto my-4"
-            src="/img/grouppictures/2023-05-07-mini.jpg"
-        >
+    <img
+      alt="Gruppenbild der Blue Bird Big Band"
+      class="w-[80%] block mx-auto my-4"
+      src="/img/grouppictures/2023-05-07-mini.jpg"
+    >
 
-        <div class="scroll overflow-hidden relative z-0">
-            <span class="absolute text-lg h-full m-0 text-left text-[#990000] font-bold w-[100vw] tracking-[2px]">
-                +++ Pianist/in gesucht +++
-            </span>
-        </div>
+    <div class="scroll overflow-hidden relative z-0">
+      <span class="absolute text-lg h-full m-0 text-left text-[#990000] font-bold w-[100vw] tracking-[2px]">
+        +++ Pianist/in gesucht +++
+      </span>
+    </div>
   </div>
 </template>
-
 
 <style scoped>
 .scroll {
@@ -94,7 +93,6 @@
     }
 }
 
-
 @media (min-width: 1536px) {
     .scroll span {
         animation-duration: 24s;
@@ -109,5 +107,4 @@
         }
     }
 }
-
 </style>
