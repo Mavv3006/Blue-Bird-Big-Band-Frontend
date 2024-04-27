@@ -7,4 +7,5 @@ export default defineNuxtConfig({
       stylistic: true,
     },
   },
+  css: ['~/assets/css/main.css'],
 })

@@ -3,10 +3,12 @@
     v-if="element.link && !element.submenu"
     class="relative px-4 leading-[3em] cursor-pointer font-semibold tracking-[1px] rounded-md whitespace-nowrap hover:bg-[#ffffff33]"
   >
-    <a
+    <NuxtLink
       v-if="element.link"
       :href="element.link"
-    >{{ element.linkName }}</a>
+    >
+      {{ element.linkName }}
+    </NuxtLink>
   </li>
   <li
     v-if="!element.link && element.submenu"
@@ -19,7 +21,9 @@
         :key="index"
         class="relative px-4 leading-[3em] cursor-pointer font-semibold tracking-[1px] rounded-md whitespace-nowrap hover:bg-[#ffffff33]"
       >
-        <a :href="submenu.link">{{ submenu.linkName }}</a>
+        <NuxtLink :href="submenu.link">
+          {{ submenu.linkName }}
+        </NuxtLink>
       </li>
     </ul>
   </li>
@@ -35,20 +39,20 @@ if (props.element.link !== undefined && props.element.submenu !== undefined) {
 
 <style scoped>
 .nav-container:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 
 .nav-container:after {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 50%;
-    right: 13px;
-    width: 0;
-    height: 0;
-    border-top: 4px solid #d61000;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    transition: border-bottom 0.1s, border-top 0.1s 0.1s;
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  right: 13px;
+  width: 0;
+  height: 0;
+  border-top: 4px solid #d61000;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  transition: border-bottom 0.1s, border-top 0.1s 0.1s;
 }
 </style>
