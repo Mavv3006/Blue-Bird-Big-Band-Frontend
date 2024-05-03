@@ -7,5 +7,10 @@ export default defineNuxtConfig({
       stylistic: true,
     },
   },
+  fontawesome: {
+    icons: {
+      solid: ['close', 'bars'],
+    },
+  },
   css: ['~/assets/css/main.css'],
 })

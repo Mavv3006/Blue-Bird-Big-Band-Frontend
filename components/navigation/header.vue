@@ -20,15 +20,15 @@ import { NavigationDesktop } from '#build/components';
         class="h-[48px] w-[60px] absolute top-0 right-0 text-white md:hidden"
         @click="toggleMobileMenu()"
       >
-        <font-awesome-icon
+        <font-awesome
           v-if="mobileNavIsOpen"
           class="text-2xl translate-y-[2px]"
-          icon="fa-solid fa-close"
+          icon="close"
         />
-        <font-awesome-icon
+        <font-awesome
           v-if="!mobileNavIsOpen"
           class="text-xl"
-          icon="fa-solid fa-bars"
+          icon="bars"
         />
       </button>
     </div>
