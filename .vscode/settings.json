@@ -7,6 +7,7 @@
     "eslint.format.enable": true,
     "prettier.useEditorConfig": false,
     "eslint.experimental.useFlatConfig": true,
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "cSpell.language": "en,de,de-DE"
   }
   

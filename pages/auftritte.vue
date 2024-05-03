@@ -23,11 +23,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { Concert } from '~/types/concert'
+const { data: concerts } = await useFetch('/api/concerts')
 
-const props = defineProps<{
-  concerts?: Concert[]
-}>()
-
-const hasConcerts = props.concerts === null // computed<boolean>(() => props.concerts && props.concerts.length > 0)
+const hasConcerts = concerts !== null
 </script>
