@@ -14,8 +14,43 @@ import { NavigationDesktop } from '#build/components';
           >
         </NuxtLink>
       </div>
+
+      <button
+        :class="{ 'open-mobile-toggle': mobileNavIsOpen }"
+        class="h-[48px] w-[60px] absolute top-0 right-0 text-white md:hidden"
+        @click="toggleMobileMenu()"
+      >
+        <font-awesome-icon
+          v-if="mobileNavIsOpen"
+          class="text-2xl translate-y-[2px]"
+          icon="fa-solid fa-close"
+        />
+        <font-awesome-icon
+          v-if="!mobileNavIsOpen"
+          class="text-xl"
+          icon="fa-solid fa-bars"
+        />
+      </button>
     </div>
 
     <NavigationDesktop />
+
+    <!-- <div class="relative">
+
+    </div> -->
   </header>
 </template>
+
+<script setup lang="ts">
+const mobileNavIsOpen = ref<boolean>(false)
+
+const toggleMobileMenu = () => {
+  mobileNavIsOpen.value = !mobileNavIsOpen.value
+}
+</script>
+
+<style scoped>
+.open-mobile-toggle {
+    background-color: #041286;
+}
+</style>
