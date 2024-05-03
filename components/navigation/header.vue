@@ -35,9 +35,13 @@ import { NavigationDesktop } from '#build/components';
 
     <NavigationDesktop />
 
-    <!-- <div class="relative">
-
-    </div> -->
+    <div class="relative">
+      <NavigationMobile
+        v-model:is-open="mobileNavIsOpen"
+        :class="{ 'opacity-100': mobileNavIsOpen, 'z-0': mobileNavIsOpen, 'z-[-1]': !mobileNavIsOpen }"
+        class="absolute w-full opacity-0 md:hidden"
+      />
+    </div>
   </header>
 </template>
 
