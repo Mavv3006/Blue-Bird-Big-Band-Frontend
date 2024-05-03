@@ -22,6 +22,10 @@
   </div>
 </template>
 
+<script setup lang="ts">
+defineOgImageComponent('Nuxt')
+</script>
+
 <style scoped>
 .scroll {
     --height: calc(50px - 1em);
