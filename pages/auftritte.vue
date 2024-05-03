@@ -6,7 +6,7 @@
       v-if="hasConcerts"
       class="flex flex-col gap-4"
     >
-      <Concert
+      <SingleConcert
         v-for="(concert, index) in concerts"
         :key="index"
         :concert="concert"
